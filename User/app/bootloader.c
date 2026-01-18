@@ -59,6 +59,9 @@ void Bootloader_ClearEntryFlag(void)
     // Enable backup SRAM clock
     __HAL_RCC_BKPRAM_CLK_ENABLE();
     
+    // Enable backup regulator to ensure data retention
+    HAL_PWREx_EnableBkUpReg();
+    
     // Clear flag
     *(volatile uint32_t*)BOOTLOADER_FLAG_ADDR = 0;
 }
