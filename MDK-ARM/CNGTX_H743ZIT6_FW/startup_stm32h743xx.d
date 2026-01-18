@@ -1,0 +1,1 @@
+cngtx_h743zit6_fw\startup_stm32h743xx.o: startup_stm32h743xx.s

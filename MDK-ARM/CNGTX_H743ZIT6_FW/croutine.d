@@ -1,0 +1,14 @@
+cngtx_h743zit6_fw\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/croutine.c
+cngtx_h743zit6_fw\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+cngtx_h743zit6_fw\croutine.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+cngtx_h743zit6_fw\croutine.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+cngtx_h743zit6_fw\croutine.o: ../Core/Inc/FreeRTOSConfig.h
+cngtx_h743zit6_fw\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+cngtx_h743zit6_fw\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+cngtx_h743zit6_fw\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+cngtx_h743zit6_fw\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/portmacro.h
+cngtx_h743zit6_fw\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+cngtx_h743zit6_fw\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
+cngtx_h743zit6_fw\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
+cngtx_h743zit6_fw\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/croutine.h
+cngtx_h743zit6_fw\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h

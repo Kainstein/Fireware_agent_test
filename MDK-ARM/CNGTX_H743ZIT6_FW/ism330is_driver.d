@@ -1,0 +1,9 @@
+cngtx_h743zit6_fw\ism330is_driver.o: ..\User\drivers\ism330is_driver.c
+cngtx_h743zit6_fw\ism330is_driver.o: ..\User\drivers\ism330is_driver.h
+cngtx_h743zit6_fw\ism330is_driver.o: ..\User\drivers\ism330is_reg.h
+cngtx_h743zit6_fw\ism330is_driver.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+cngtx_h743zit6_fw\ism330is_driver.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+cngtx_h743zit6_fw\ism330is_driver.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
+cngtx_h743zit6_fw\ism330is_driver.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+cngtx_h743zit6_fw\ism330is_driver.o: ..\User\drivers\driver_printf_config.h
+cngtx_h743zit6_fw\ism330is_driver.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
