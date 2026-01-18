@@ -44,6 +44,9 @@ void Bootloader_SetEntryFlag(void)
     // Enable backup SRAM clock
     __HAL_RCC_BKPRAM_CLK_ENABLE();
     
+    // Enable backup regulator to retain data in all power modes
+    HAL_PWREx_EnableBkUpReg();
+    
     // Set magic flag value
     *(volatile uint32_t*)BOOTLOADER_FLAG_ADDR = BOOTLOADER_FLAG_VALUE;
 }
@@ -56,6 +59,9 @@ void Bootloader_ClearEntryFlag(void)
     // Enable backup SRAM clock
     __HAL_RCC_BKPRAM_CLK_ENABLE();
     
+    // Enable backup regulator to ensure data retention
+    HAL_PWREx_EnableBkUpReg();
+    
     // Clear flag
     *(volatile uint32_t*)BOOTLOADER_FLAG_ADDR = 0;
 }
@@ -67,6 +73,9 @@ bool Bootloader_IsEntryRequested(void)
 {
     // Enable backup SRAM clock
     __HAL_RCC_BKPRAM_CLK_ENABLE();
+    
+    // Enable backup regulator to ensure data retention
+    HAL_PWREx_EnableBkUpReg();
     
     // Check flag value
     return (*(volatile uint32_t*)BOOTLOADER_FLAG_ADDR == BOOTLOADER_FLAG_VALUE);
@@ -233,14 +242,16 @@ void Bootloader_DisplayISPProgress(uint8_t progress_percent)
     // Get segment code for dash '-' (G segment only = 0x40)
     uint8_t dash_segment = 0x40;
     
-    // Update Group1 display (COM1-COM5) - 5 digits
+    // Update Group1 display (COM0-COM4, positions 0-4) - 5 digits
+    // Fill left-to-right: position 4 (leftmost) to position 0 (rightmost)
     for (int i = 0; i < 5; i++) {
+        int position = 4 - i;  // Map to COM4→COM0 (left to right)
         if (i < dash_count) {
             // Show dash
-            ZLG72128_WriteDigit(&g_display_handle, 1 + i, dash_segment);
+            ZLG72128_WriteDigit(&g_display_handle, position, dash_segment);
         } else {
             // Clear (blank)
-            ZLG72128_WriteDigit(&g_display_handle, 1 + i, 0x00);
+            ZLG72128_WriteDigit(&g_display_handle, position, 0x00);
         }
     }
     
